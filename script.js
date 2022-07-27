@@ -5,6 +5,12 @@ const form = document.querySelector(".form")
 const input = document.querySelector(".input_search")
 const btn_prev = document.querySelector(".btn_prev")
 const btn_next = document.querySelector(".btn_next")
+const peso = document.querySelector(".peso")
+const altura = document.querySelector(".altura")
+const hab1 = document.querySelector(".habilidade-1")
+const hab2 = document.querySelector(".habilidade-2")
+const info = document.querySelector(".informacoes")
+const btn = document.querySelector(".btn")
 
 let contador = 1
 
@@ -41,6 +47,15 @@ if(data){
 
     pokemon_image.src = data["sprites"]["front_default"]
 
+    peso.innerHTML = data.weight /10 + " Kg"
+
+    altura.innerHTML = data.height /10 + " M"
+
+    hab1.innerHTML = data["abilities"]["0"]["ability"]["name"]
+
+    hab2.innerHTML = data["abilities"]["1"]["ability"]["name"]
+
+
     input.value= ""
 
     contador = data.id
@@ -69,8 +84,18 @@ btn_prev.addEventListener("click", () => {
    
     })
 
+
+ btn.addEventListener("click", function(){
+  if(info.classList.contains("show-informacoes")){
+    info.classList.remove("show-informacoes")
+  }else{
+    info.classList.add("show-informacoes")
+  }
+
+ })   
+
 renderPokemon(contador)
 
 
 
-
+// Altura, Peso, Habilidades

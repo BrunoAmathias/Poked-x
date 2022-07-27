@@ -1,14 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 body{
 text-align: center;
 background-image: linear-gradient(to bottom, #6ab7f5, #fff);
+background-repeat: no-repeat;
+background-size: cover;
 height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: center;
 }
 
 .container{
@@ -81,4 +90,105 @@ height: 100vh;
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
 }
+.container-inf-btn{
+    margin-top: 3%;
+}
 
+
+.informacoes{
+    position: relative;
+    margin-top: 3%;
+    border-radius: 20px;
+    border: 1.5px solid black;
+    background-color: #ff3334;
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+    font-size: 0;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+.show-informacoes{
+    font-size: clamp(8px, 5vw, 16px);
+    visibility: visible;
+    opacity: 1;
+    width: 400px;
+    height: 400px;
+}
+
+.titulo{
+    margin-top: 7%
+}
+.container-de-cima{
+    
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    top: 10%;
+}
+
+
+
+.container-de-dentro h2{
+ padding-bottom: 25px;
+}
+.container-de-dentro p{
+
+}
+
+.container-de-baixo{
+    display: flex;
+    position: relative;
+    top: 25%;
+    justify-content: space-around;
+}
+
+.div-btn{
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    right: -11%;
+    transform: translate(40%, 0);
+
+}
+.btn{
+    background-color: #ff3334;
+    padding: 10% 40%;
+    border-radius: 10px;
+    padding: 10%;
+    font-size: clamp(8px, 5vw, 1rem);
+}
+
+
+@media (max-width:980px){
+    body{
+        height: 150vh;
+    }
+
+main{
+    flex-direction: column;
+align-items: center;}
+.informacoes{
+margin-top: 100px
+}
+
+.div-btn{
+    bottom: -9%;
+    left: 0%;
+    transform: translate(34%,0);
+}
+.btn{
+padding: 2%;
+}
+
+}
+
+
+@media (max-width:540px){
+
+.show-informacoes{
+    width: 300px;
+    height: 350px;
+}
+
+}
