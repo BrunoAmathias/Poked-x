@@ -147,9 +147,9 @@ main{
     display: flex;
     position: absolute;
     bottom: 5%;
-    right: -11%;
+    right: -17%;
     transform: translate(40%, 0);
-
+    width: 150px;
 }
 .btn{
     background-color: #ff3334;
@@ -173,12 +173,12 @@ margin-top: 100px
 }
 
 .div-btn{
+    justify-content: center;
     bottom: -9%;
-    left: 0%;
-    transform: translate(34%,0);
+    left: 23%;
 }
 .btn{
-padding: 2%;
+padding: 5%;
 }
 
 }
